@@ -1,5 +1,12 @@
 <?php
 
+$person_a = new Person2('suzuki', 28, 'male');
+$person_b = new Person2('tanaka', 26, 'male');
+
+$person_a_sex = $person_a->getSex();
+
+var_dump($person_a_sex);
+
 class Person
 {
     private $name;
@@ -37,7 +44,3 @@ class Person2 extends Person
         return $this->sex;
     }
 }
-
-$person_a = new Person2('suzuki', 28, 'male');
-$person_b = new Person2('tanaka', 26, 'male');
-$person_a_sex = $person_a->getSex();
