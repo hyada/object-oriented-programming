@@ -6,7 +6,6 @@ $person_b = new Person('tanaka', 26);
 $person_a_name = $person_a->getName();
 $person_a_age = $person_a->getAge();
 
-
 var_dump($person_a_name);
 var_dump($person_a_age);
 
