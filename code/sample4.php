@@ -22,22 +22,22 @@ class Person
     }
 }
 
-class Person3 extends Person
+class Person2 extends Person
 {
-    private static $number = 0;
+    private $sex;
 
-    public function __construct($name, $age)
+    public function __construct($name, $age, $sex)
     {
         parent::__construct($name, $age);
-        ++self::$number;
+        $this->sex = $sex;
     }
 
-    public static function getNumber()
+    public function getSex()
     {
-        return self::$number;
+        return $this->sex;
     }
 }
 
-$person_a = new Person3('suzuki', 28);
-$person_b = new Person3('tanaka', 26);
-$person_number = Person3::getNumber();
+$person_a = new Person2('suzuki', 28, 'male');
+$person_b = new Person2('tanaka', 26, 'male');
+$person_a_sex = $person_a->getSex();

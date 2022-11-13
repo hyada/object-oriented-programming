@@ -2,7 +2,7 @@
 
 class Person
 {
-    private $name;
+    protected $name;
     private $age;
 
     public function __construct($name, $age)
@@ -34,7 +34,7 @@ class Person2 extends Person
 
     public function getSex()
     {
-        return $this->sex;
+        return $this->name.':'.$this->sex;
     }
 }
 

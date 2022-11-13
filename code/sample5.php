@@ -2,7 +2,7 @@
 
 class Person
 {
-    protected $name;
+    private $name;
     private $age;
 
     public function __construct($name, $age)
@@ -22,22 +22,22 @@ class Person
     }
 }
 
-class Person2 extends Person
+class Person3 extends Person
 {
-    private $sex;
+    private static $number = 0;
 
-    public function __construct($name, $age, $sex)
+    public function __construct($name, $age)
     {
         parent::__construct($name, $age);
-        $this->sex = $sex;
+        ++self::$number;
     }
 
-    public function getSex()
+    public static function getNumber()
     {
-        return $this->name.':'.$this->sex;
+        return self::$number;
     }
 }
 
-$person_a = new Person2('suzuki', 28, 'male');
-$person_b = new Person2('tanaka', 26, 'male');
-$person_a_sex = $person_a->getSex();
+$person_a = new Person3('suzuki', 28);
+$person_b = new Person3('tanaka', 26);
+$person_number = Person3::getNumber();
