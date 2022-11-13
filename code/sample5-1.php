@@ -40,4 +40,7 @@ class Person3 extends Person
 
 $person_a = new Person3('suzuki', 28);
 $person_b = new Person3('tanaka', 26);
+
 $person_number = Person3::getNumber();
+
+var_dump($person_number);
