@@ -42,3 +42,4 @@ class Person2 extends Person
         return $this->sex;
     }
 }
+
