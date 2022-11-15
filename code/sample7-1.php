@@ -2,18 +2,21 @@
 
 class Person
 {
-    protected static $number = 0;
+    protected static $age = 26;
 
-    public static function getNumber()
+    public static function getAge()
     {
-        return self::$number;
+        return static::$age;
     }
 }
 
 class Person2 extends Person
 {
-    protected static $number = 1;
+    protected static $age = 28;
 }
 
-var_dump(Person::getNumber());
-var_dump(Person2::getNumber());
+$person_age = Person::getAge();
+$person2_age = Person2::getAge();
+
+var_dump($person_age);
+var_dump($person2_age);
